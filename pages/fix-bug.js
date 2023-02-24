@@ -7,7 +7,7 @@ import copyToClipboard from '../copyToClipboard';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Features from '../components/Features';
-import { Fade } from 'react-reveal'
+
 import Loading from '../components/Loading';
 
 const FixBug = () => {
@@ -59,19 +59,19 @@ const FixBug = () => {
             
 
             <main className="min-h-screen py-4 flex flex-1 flex-col justify-center items-center ">
-                <Fade bottom>
+                
                     <h1 className="text-4xl md:text-6xl text-center mt-10 md:mt-16 ">
                         Welcome to <span className='text-blue-600'>aicodebuddy.com!</span>
                     </h1>
-                </Fade>
+                
 
-                <Fade bottom>
+                
                     <p className="text-center mt-5 text-2xl md:text-3xl">
                         Fix the bugs in your code.
                     </p>
 
-                </Fade>
-                <Fade bottom>
+                
+                
                     <form onSubmit={onSubmit} className="w-full text-center flex flex-col  md:flex-row max-w-4xl mx-auto space-y-4 md:space-x-2 md:space-y-0 my-14 ">
                         <input
                             type="text"
@@ -83,7 +83,7 @@ const FixBug = () => {
                         />
                         <input type="submit" value={`${loading ? "loading..." : "Fix bugs"}`} className=' textwh bg-blue-600 border-none rounded-lg text-center cursor-pointer px-10 py-3 ' />
                     </form>
-                </Fade>
+                
                 {
                     loading && <Loading />
                 }
@@ -91,13 +91,13 @@ const FixBug = () => {
                 {
                     result
                     &&
-                    <Fade bottom>
+                    
                             <div className={[styles.card, "w-full max-w-7xl mx-auto p-4 bg-gray-900 mb-6 relative rounded-lg"]}>
                                 <FiCopy color='white' size={20} className="absolute top-2 right-2 cursor-pointer" onClick={(e) => copyToClipboard(result)} />
                                 <ToastContainer />
                                 <p className='mr-10'>{result}</p>
                             </div>
-                    </Fade>
+                    
                 }
 
                 <Features />
