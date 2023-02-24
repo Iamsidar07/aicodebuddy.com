@@ -6,7 +6,7 @@ const Footer = () => {
   return (
       <footer className={styles.footer}>
           
-              Powered by{' '}
+              Powered by 
               aicodebuddy.com
 
       </footer>

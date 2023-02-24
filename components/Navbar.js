@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="flex  items-center justify-between  ">
           <div className="z-[50] py-4 px-3 ">
 
-            <a href={"/"} >
+            <Link href={"/"} >
               <div className="flex items-center">              
                 <Image
                 src={"/robot.png"}
@@ -28,7 +28,7 @@ const Navbar = () => {
                 alt="menu"
               />
                 <span>aicodebuddy.com</span></div>
-            </a>
+            </Link>
 
             <div
               onClick={() => setOpen(!open)}
@@ -54,9 +54,9 @@ const Navbar = () => {
                 className={` group whitespace-nowrap  md:my-0 text-left p-3 md:hover:text-[#0082FF]  rounded-full transition-all ease-in duration-100 cursor-pointer `}
               >
 
-                <a href={link.link}>
+                <Link href={link.link}>
                   {link.name}
-                </a>
+                </Link>
 
                 <small className="hidden pl-1 md:inline-block opacity-0 md:group-hover:opacity-100 md:group-hover:animate-bounce">
                   {link.icon}
@@ -64,10 +64,10 @@ const Navbar = () => {
               </li>
             ))}
 
-            <a href="https://instagram.com/iamsidar07" target={"_blank"}>
+            <Link href="https://instagram.com/iamsidar07" target={"_blank"}>
               <button className="px-5  rounded-full py-2   border-none shadow-lg  bg-blue-600 text-white md:hover:bg-[#0084ffd6]  md:hover:translate-y-2 transition-all duration-150 ease-in tracking-wider ">
                 follow              </button>
-            </a>
+            </Link>
           </ul>
         </div>
       </div>
