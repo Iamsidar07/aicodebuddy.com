@@ -8,11 +8,10 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Features from '../components/Features';
 
-const RefactorCode = () => {
+const WhyCodeIsNotWorking = () => {
     const [code, setCode] = useState("");
     const [result, setResult] = useState("");
     const [loading, setLoading] = useState(false);
-
     async function onSubmit(event) {
         event.preventDefault();
         if (loading) {
@@ -20,7 +19,7 @@ const RefactorCode = () => {
         }
         setLoading(true);
         try {
-            const response = await fetch("/api/refactor", {
+            const response = await fetch("/api/why-code-is-not-working", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -55,7 +54,7 @@ const RefactorCode = () => {
 
     return (
         <div className="p-2 md:px-8">
-            
+
 
             <main className="min-h-screen py-4 flex flex-1 flex-col justify-center items-center ">
                 <h1 className="text-4xl md:text-6xl text-center mt-10 md:mt-16 ">
@@ -63,7 +62,7 @@ const RefactorCode = () => {
                 </h1>
 
                 <p className="text-center mt-5 text-2xl md:text-3xl">
-                    Refactor your code in just one click.
+                    Why my code is not working ?
                 </p>
 
                 <form onSubmit={onSubmit} className="w-full text-center flex flex-col  md:flex-row max-w-4xl mx-auto space-y-4 md:space-x-2 md:space-y-0 my-14 ">
@@ -75,7 +74,7 @@ const RefactorCode = () => {
                         onChange={(e) => setCode(e.target.value)}
                         className="text-base leading-6 text-gray-200 px-4 py-6 flex-1 rounded-lg outline-none "
                     />
-                    <input type="submit" value={`${loading ? "loading..." : "Refactor Code"}`} className=' text-white bg-blue-600 border-none  text-center cursor-pointer px-10 py-3 rounded-lg' />
+                    <input type="submit" value={`${loading ? "loading..." : "Know reason"}`} className=' text-white bg-blue-600 border-none rounded-lg text-center cursor-pointer px-10 py-3 ' />
                 </form>
                 {
                     loading && <Image src={"/flickr-loading.gif"} alt="loading" width={100} height={50} />
@@ -90,10 +89,13 @@ const RefactorCode = () => {
                         <p className='mr-10'>{result}</p>
                     </div>
                 }
+
                 <Features />
             </main>
+
+
         </div>
     )
 }
 
-export default RefactorCode
+export default WhyCodeIsNotWorking

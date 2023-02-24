@@ -68,11 +68,11 @@ export default function Home() {
       
 
       <main className="min-h-screen py-4 flex flex-1 flex-col justify-center items-center ">
-        <h1 className="text-3xl md:text-6xl text-center mt-10 md:mt-16 ">
+        <h1 className="text-4xl md:text-6xl text-center mt-10 md:mt-16 ">
           Welcome to <span className='text-blue-600'>aicodebuddy.com!</span>
         </h1>
 
-        <p className="text-center mt-5 text-lg">
+        <p className="text-center mt-5 text-2xl md:text-3xl">
           Add comments into your code.
         </p>
 

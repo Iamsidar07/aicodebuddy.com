@@ -4,11 +4,11 @@ import Image from "next/image";
 
 const Navbar = () => {
   let Links = [
-    { name: "Add comments", link: "/", id: 1 },
     { name: "Explain Code", link: "/explain-code", id: 2 },
     { name: "Refactor Code", link: "refactor-code", id: 3 },
     { name: "Fix bugs", link: "/fix-bug", id: 4, },
     { name: "Convert Language", link: "/convert-language", id: 5, },
+    { name: "Code is not working ?", link: "/why-code-is-not-working", id: 5, },
   ];
   const [open, setOpen] = useState(false);
 
@@ -32,12 +32,12 @@ const Navbar = () => {
 
             <div
               onClick={() => setOpen(!open)}
-              className="  absolute right-2 top-2 cursor-pointer md:hidden"
+              className="  absolute right-2 top-3 cursor-pointer md:hidden"
             >
               <Image
                 src={"/menu.jpg"}
-                width={30}
-                height={30}
+                width={20}
+                height={20}
                 alt="menu"
               />
 

@@ -41,6 +41,15 @@ const Features = () => {
                   Convert language of your code into another programming language.
               </p>
           </Link>
+          <Link
+              href="/why-code-is-not-working"
+              className={styles.card}
+          >
+              <h2>Code is not working ? &rarr;</h2>
+              <p>
+                  Are you stuck in some point ? Thinking why my code is not working? here is the reason.
+              </p>
+          </Link>
       </div>
   )
 }

@@ -74,7 +74,7 @@
 }
 
 .card {
-  margin: 1rem;
+  margin: 1rem ;
   padding: 1.5rem;
   text-align: left;
   color: inherit;
@@ -130,6 +130,10 @@
     width: 100%;
     flex-direction: column;
   }
+  .card{
+  margin: 0.5rem 0;
+  }
+
 }
 
 @media (prefers-color-scheme: dark) {
