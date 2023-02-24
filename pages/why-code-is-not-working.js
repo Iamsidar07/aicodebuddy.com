@@ -8,6 +8,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Features from '../components/Features';
 import Loading from '../components/Loading';
+import Result from '../components/Result';
 
 const WhyCodeIsNotWorking = () => {
     const [code, setCode] = useState("");
@@ -89,13 +90,7 @@ const WhyCodeIsNotWorking = () => {
 
                 {
                     result
-                    &&
-                    
-                            <div className={[styles.card, "w-full max-w-7xl mx-auto p-4 bg-gray-900 mb-6 relative rounded-lg"]}>
-                                <FiCopy color='white' size={20} className="absolute top-2 right-2 cursor-pointer" onClick={(e) => copyToClipboard(result)} />
-                                <ToastContainer />
-                                <p className='mr-10'>{result}</p>
-                            </div>
+                    && <Result result={result} />
                     
                 }
 

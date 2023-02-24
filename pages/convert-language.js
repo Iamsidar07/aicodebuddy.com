@@ -1,21 +1,16 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import { useState } from 'react';
-import styles from '../styles/Home.module.css'
-import { FiCopy } from 'react-icons/fi';
-import copyToClipboard from '../copyToClipboard';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Features from '../components/Features';
-
 import Loading from '../components/Loading';
+import Result from '../components/Result';
 
 const ConvertLanguage = () => {
-    const languages=["Python","JavaScript","C","C++","Java","TypeScript","Swift","Dart","Go","Kotlin","Ruby","PHP"];
+    const languages = ["Python", "JavaScript", "C", "C++", "Java", "TypeScript", "Swift", "Dart", "Go", "Kotlin", "Ruby", "PHP"];
     const [code, setCode] = useState("");
     const [result, setResult] = useState("");
     const [loading, setLoading] = useState(false);
-    const [language,setLanguage]=useState("Python");
+    const [language, setLanguage] = useState("Python");
 
     async function onSubmit(event) {
         event.preventDefault();
@@ -30,7 +25,7 @@ const ConvertLanguage = () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ code,language }),
+                body: JSON.stringify({ code, language }),
             });
 
             const data = await response.json();
@@ -58,63 +53,58 @@ const ConvertLanguage = () => {
         }
     }
 
-  return (
-      <div className="p-2 md:px-8">
-          
-
-          <main className="min-h-screen py-4 flex flex-1 flex-col justify-center items-center ">
-              
-                  <h1 className="text-4xl md:text-6xl text-center mt-10 md:mt-16 ">
-                      Welcome to <span className='text-blue-600'>aicodebuddy.com!</span>
-                  </h1>
-              
-
-              
-                  <p className="text-center mt-5 text-2xl md:text-3xl">
-                      Convert your code into another programming language.
-                  </p>
-              
-
-             
-                  <form onSubmit={onSubmit} className="w-full text-center flex flex-col  md:flex-row max-w-4xl mx-auto space-y-4 md:space-x-2 md:space-y-0 my-14 ">
-                      <input
-                          type="text"
-                          name="code"
-                          placeholder="Paste your code here..."
-                          value={code}
-                          onChange={(e) => setCode(e.target.value)}
-                          className="text-base leading-6 text-gray-200 px-4 py-6 flex-1 rounded-lg outline-none "
-                      />
-                      <select name="language" id="language" value={language} onChange={(e) => setLanguage(e.target.value)} className="p-3 outline-none rounded-lg">
-                          {
-                              languages.map((lang, i) => <option value={lang} key={i} >{lang}</option>)
-                          }
-                      </select>
-                      <input type="submit" value={`${loading ? "Converting..." : "Conert Language"}`} className=' textwh bg-blue-600 border-none rounded-lg text-center cursor-pointer px-10 py-3 ' />
-                  </form>
-             
-              {
-                  loading && <Loading/>
-              }
-
-              {
-                  result
-                  &&
-                  
-                          <div className={[styles.card, "w-full max-w-7xl mx-auto p-4 bg-gray-900 mb-6 relative rounded-lg"]}>
-                              <FiCopy color='white' size={20} className="absolute top-2 right-2 cursor-pointer" onClick={(e) => copyToClipboard(result)} />
-                              <ToastContainer />
-                              <p className='mr-10'>{result}</p>
-                          </div>
-                  
-              }
-
-              <Features />
-          </main>
+    return (
+        <div className="p-2 md:px-8">
 
 
-      </div>
-  )
+            <main className="min-h-screen py-4 flex flex-1 flex-col justify-center items-center ">
+
+                <h1 className="text-4xl md:text-6xl text-center mt-10 md:mt-16 ">
+                    Welcome to <span className='text-blue-600'>aicodebuddy.com!</span>
+                </h1>
+
+
+
+                <p className="text-center mt-5 text-2xl md:text-3xl">
+                    Convert your code into another programming language.
+                </p>
+
+
+
+                <form onSubmit={onSubmit} className="w-full text-center flex flex-col  md:flex-row max-w-4xl mx-auto space-y-4 md:space-x-2 md:space-y-0 my-14 ">
+                    <input
+                        type="text"
+                        name="code"
+                        placeholder="Paste your code here..."
+                        value={code}
+                        onChange={(e) => setCode(e.target.value)}
+                        className="text-base leading-6 text-gray-200 px-4 py-6 flex-1 rounded-lg outline-none "
+                    />
+                    <select name="language" id="language" value={language} onChange={(e) => setLanguage(e.target.value)} className="p-3 outline-none rounded-lg">
+                        {
+                            languages.map((lang, i) => <option value={lang} key={i} >{lang}</option>)
+                        }
+                    </select>
+                    <input type="submit" value={`${loading ? "Converting..." : "Conert Language"}`} className=' textwh bg-blue-600 border-none rounded-lg text-center cursor-pointer px-10 py-3 ' />
+                </form>
+
+                {
+                    loading && <Loading />
+                }
+
+                {
+                    result
+                    &&
+                    <Result result={result} />
+
+                }
+
+                <Features />
+            </main>
+
+
+        </div>
+    )
 }
 
 export default ConvertLanguage

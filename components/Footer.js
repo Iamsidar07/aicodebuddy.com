@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className='w-full flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0'>
-        <div className='flex items-center flex-col md:flex-row md:flex-row space-y-2 md:space-x-2 md:space-y-0 px-5'>
+        <div className='flex items-center flex-col  md:flex-row space-y-2 md:space-x-2 md:space-y-0 px-5'>
           <Link href={"/privacy-policy"}>
             privacy and policy
           </Link>
