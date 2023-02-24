@@ -7,6 +7,7 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
   return <>
     <Head>
+      <meta name="google-site-verification" content="ov7Bey3q-3Oik96i5soxIG-HXH4B9JBSXXe11_XveJs" />
       <title>Aicodebuddy.com || Your Online Coder Friend</title>
       <meta name="description" content="Improve your coding experience with our website! Our platform offers a variety of useful features including the ability to add comments to your code, easily fix bugs, convert code into different languages, and refactor your existing code. Simplify your coding process and enhance your productivity with our powerful tools. Try us out today!" />
       <link rel="icon" href="/robot.png" />
