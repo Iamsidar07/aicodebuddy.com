@@ -7,6 +7,8 @@ import copyToClipboard from '../copyToClipboard';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Features from '../components/Features';
+import { Fade } from 'react-reveal'
+import Loading from '../components/Loading';
 
 const ConvertLanguage = () => {
     const languages=["Python","JavaScript","C","C++","Java","TypeScript","Swift","Dart","Go","Kotlin","Ruby","PHP"];
@@ -61,42 +63,50 @@ const ConvertLanguage = () => {
           
 
           <main className="min-h-screen py-4 flex flex-1 flex-col justify-center items-center ">
-              <h1 className="text-4xl md:text-6xl text-center mt-10 md:mt-16 ">
-                  Welcome to <span className='text-blue-600'>aicodebuddy.com!</span>
-              </h1>
+              <Fade bottom>
+                  <h1 className="text-4xl md:text-6xl text-center mt-10 md:mt-16 ">
+                      Welcome to <span className='text-blue-600'>aicodebuddy.com!</span>
+                  </h1>
+              </Fade>
 
-              <p className="text-center mt-5 text-2xl md:text-3xl">
-                  Convert your code into another programming language.
-              </p>
+              <Fade bottom>
+                  <p className="text-center mt-5 text-2xl md:text-3xl">
+                      Convert your code into another programming language.
+                  </p>
+              </Fade>
 
-              <form onSubmit={onSubmit} className="w-full text-center flex flex-col  md:flex-row max-w-4xl mx-auto space-y-4 md:space-x-2 md:space-y-0 my-14 ">
-                  <input
-                      type="text"
-                      name="code"
-                      placeholder="Paste your code here..."
-                      value={code}
-                      onChange={(e) => setCode(e.target.value)}
-                      className="text-base leading-6 text-gray-200 px-4 py-6 flex-1 rounded-lg outline-none "
-                  />
-                  <select name="language" id="language" value={language} onChange={(e) => setLanguage(e.target.value)} className="p-3 outline-none rounded-lg">
-                      {
-                          languages.map((lang,i) => <option value={lang} key={i} >{lang}</option>)
-                      }
-                  </select>
-                  <input type="submit" value={`${loading ? "Converting..." : "Conert Language"}`} className=' textwh bg-blue-600 border-none rounded-lg text-center cursor-pointer px-10 py-3 ' />
-              </form>
+             <Fade bottom>
+                  <form onSubmit={onSubmit} className="w-full text-center flex flex-col  md:flex-row max-w-4xl mx-auto space-y-4 md:space-x-2 md:space-y-0 my-14 ">
+                      <input
+                          type="text"
+                          name="code"
+                          placeholder="Paste your code here..."
+                          value={code}
+                          onChange={(e) => setCode(e.target.value)}
+                          className="text-base leading-6 text-gray-200 px-4 py-6 flex-1 rounded-lg outline-none "
+                      />
+                      <select name="language" id="language" value={language} onChange={(e) => setLanguage(e.target.value)} className="p-3 outline-none rounded-lg">
+                          {
+                              languages.map((lang, i) => <option value={lang} key={i} >{lang}</option>)
+                          }
+                      </select>
+                      <input type="submit" value={`${loading ? "Converting..." : "Conert Language"}`} className=' textwh bg-blue-600 border-none rounded-lg text-center cursor-pointer px-10 py-3 ' />
+                  </form>
+             </Fade>
               {
-                  loading && <Image src={"/flickr-loading.gif"} alt="loading" width={100} height={50} />
+                  loading && <Loading/>
               }
 
               {
                   result
                   &&
-                  <div className={[styles.card, "w-full max-w-7xl mx-auto p-4 bg-gray-900 mb-6 relative rounded-lg"]}>
-                      <FiCopy color='white' size={20} className="absolute top-2 right-2 cursor-pointer" onClick={(e) => copyToClipboard(result)} />
-                      <ToastContainer />
-                      <p className='mr-10'>{result}</p>
-                  </div>
+                  <Fade bottom>
+                          <div className={[styles.card, "w-full max-w-7xl mx-auto p-4 bg-gray-900 mb-6 relative rounded-lg"]}>
+                              <FiCopy color='white' size={20} className="absolute top-2 right-2 cursor-pointer" onClick={(e) => copyToClipboard(result)} />
+                              <ToastContainer />
+                              <p className='mr-10'>{result}</p>
+                          </div>
+                  </Fade>
               }
 
               <Features />
