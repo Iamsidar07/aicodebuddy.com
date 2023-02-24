@@ -82,7 +82,7 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  max-width: 390px;
 }
 
 .card:hover,
@@ -106,6 +106,23 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+.input {
+  font-size: 16px;
+  line-height: 24px;
+  color: #293670;
+  font-family: "ColfaxAI", Helvetica, sans-serif;
+}
+
+.input[type="submit"] {
+  padding: 12px 0;
+  color: #fff;
+  background-color: #10a37f;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
