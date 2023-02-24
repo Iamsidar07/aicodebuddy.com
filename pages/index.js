@@ -94,7 +94,7 @@ export default function Home() {
         {
           result
           &&
-          <div className={[styles.card, "w-full max-w-7xl mx-auto p-2 md:p-4 bg-gray-900 mb-6 relative"]}>
+          <div className={[styles.card, "w-full max-w-7xl mx-auto p-2 md:p-4 bg-gray-900 mb-6 relative rounded-lg"]}>
             <FiCopy color='white' size={20} className="absolute top-2 right-2 cursor-pointer" onClick={(e) => copyToClipboard(result)} />
             <ToastContainer />
             <p className='mr-10'>{result}</p>
