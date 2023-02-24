@@ -8,7 +8,7 @@ const Navbar = () => {
     { name: "Refactor Code", link: "refactor-code", id: 3 },
     { name: "Fix bugs", link: "/fix-bug", id: 4, },
     { name: "Convert Language", link: "/convert-language", id: 5, },
-    { name: "Code is not working ?", link: "/why-code-is-not-working", id: 5, },
+    { name: "Code is not working ?", link: "/why-code-is-not-working", id: 6, },
   ];
   const [open, setOpen] = useState(false);
 
