@@ -38,7 +38,7 @@ const Features = () => {
           >
               <h2>Convert Language &rarr;</h2>
               <p>
-                  Convert Your code's language into another programming language.
+                  Convert language of your code into another programming language.
               </p>
           </Link>
       </div>
