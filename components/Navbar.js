@@ -14,7 +14,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className={` bg-black shadow-sm sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20]   `}>
+    <nav className={` bg-[#121212] shadow-sm sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20]   `}>
       <div className="max-w-7xl mx-auto">
         <div className="flex  items-center justify-between  ">
           <div className="z-[50] py-4 px-3 ">
@@ -45,7 +45,7 @@ const Navbar = () => {
           </div>
 
           <ul
-            className={` md:h-fit flex flex-col items-center space-x-1 md:flex-row  border-gray-100  md:border-none  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] right-0 w-[90%] pt-8 md:pt-0 md:w-auto md:pl-0 p-2 text-center transition-all duration-250 ease-in ${open ? " top-12 bg-black   h-[95vh] " : "top-[-76vh] "
+            className={` md:h-fit flex flex-col items-center space-x-1 md:flex-row  border-gray-100  md:border-none  md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[0] right-0 w-[90%] pt-8 md:pt-0 md:w-auto md:pl-0 p-2 text-center transition-all duration-250 ease-in ${open ? " top-12 bg-[#121212]   h-[95vh] " : "top-[-76vh] "
               }`}
           >
             {Links.map((link) => (
