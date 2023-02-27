@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import  {IoReorderThreeOutline}  from 'react-icons/io5';
+
 
 const Navbar = () => {
   let Links = [
     { name: "Explain Code", link: "/explain-code", id: 2 },
-    { name: "Refactor Code", link: "refactor-code", id: 3 },
+    { name: "Refactor Code", link: "/refactor-code", id: 3 },
+    { name: "Opimise code", link: "/optimise-code", id: 7, },
     { name: "Fix bugs", link: "/fix-bug", id: 4, },
     { name: "Convert Language", link: "/convert-language", id: 5, },
-    { name: "Code is not working ?", link: "/why-code-is-not-working", id: 6, },
+    { name: "Find bug", link: "/why-code-is-not-working", id: 6, },
   ];
   const [open, setOpen] = useState(false);
+
+  const path=useRouter();
+
 
 
   return (
@@ -27,19 +34,21 @@ const Navbar = () => {
                   height={30}
                   alt="logo"
                 />
-                <span className="text-2xl md:text-4xl">aicodebuddy.com</span></div>
+                
+                <span className="text-lg md:text-2xl">aicodebuddy.com</span></div>
             </Link>
 
             <div
               onClick={() => setOpen(!open)}
-              className="  absolute right-5 top-5 cursor-pointer md:hidden"
+              className="  absolute right-5 top-3 cursor-pointer md:hidden"
             >
-              <Image
+              {/* <Image
                 src={"/menu.jpg"}
                 width={20}
                 height={20}
                 alt="menu"
-              />
+              /> */}
+              <IoReorderThreeOutline color={"white"} size={30}/>
 
             </div>
           </div>
@@ -51,7 +60,7 @@ const Navbar = () => {
             {Links.map((link) => (
               <li
                 key={link.id}
-                className={` group whitespace-nowrap  md:my-0 text-left p-3 md:hover:text-[#0082FF]  rounded-full transition-all ease-in duration-100 cursor-pointer `}
+                className={` group whitespace-nowrap  md:my-0 text-left p-3 md:hover:text-[#0082FF] ${path.asPath === link.link && "text-[#0082FF]"}  rounded-full transition-all ease-in duration-100 cursor-pointer `}
               >
                 <Link href={link.link}>
                   {link.name}
