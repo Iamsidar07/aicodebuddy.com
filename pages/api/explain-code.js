@@ -53,6 +53,5 @@ export default async function (req, res) {
 
 function generatePrompt(code) {
     
-    return `Explain me this code:
-    ${code}`;
+    return `Explain me this code like I am a 10 year old kid ${code}`;
 }
