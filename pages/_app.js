@@ -6,6 +6,7 @@ import '../styles/globals.css'
 import { useRouter } from 'next/router';
 import { useEffect } from "react";
 import * as gtag from "../lib/gtag"
+import { ToastContainer } from 'react-toastify'
 
 
 function MyApp({ Component, pageProps }) {
@@ -21,6 +22,7 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
+
   return <>
     <Head>
       <meta name="google-site-verification" content="ov7Bey3q-3Oik96i5soxIG-HXH4B9JBSXXe11_XveJs" />
@@ -48,6 +50,7 @@ function MyApp({ Component, pageProps }) {
 
     
     <Navbar/>
+    <ToastContainer/>
 
     <Component {...pageProps} />
 

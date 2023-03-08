@@ -28,9 +28,10 @@ export default function Home() {
       });
 
       const data = await response.json();
+      console.log(data)
       if (response.status !== 200) {
         toast.error('Oops! something went wrong', {
-          position: "bottom-center",
+          position: "top-left",
           autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -41,12 +42,12 @@ export default function Home() {
         });
         throw data.error || new Error(`Request failed with status ${response.status}`);
       }
-      setResult(data.result);
+      setResult(data.result.replaceAll('\n','<br/>'));
       setCode("");
     } catch (error) {
       // Consider implementing your own error handling logic here
       toast.error(error, {
-        position: "bottom-center",
+        position: "top-left",
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -63,7 +64,7 @@ export default function Home() {
   }
 
   return (
-    <div className="p-2 md:px-8">
+    <div className="p-2">
       <main className="min-h-screen py-4 flex flex-1 flex-col justify-center items-center ">
         <Intro tagline='Add comments into your code.' />
         <Form name={"code"} btnText={"Add Comment"} onSubmit={onSubmit} value={code} btnTextIfLoading={"Adding comment..."} setValueHook={setCode} loading={loading} />

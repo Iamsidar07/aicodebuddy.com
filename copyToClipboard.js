@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 const copyToClipboard=(text)=>{
     navigator.clipboard.writeText(text);
     toast.success('🤖 Copied to clipboard!', {
-        position: "bottom-center",
+        position: "top-left",
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,

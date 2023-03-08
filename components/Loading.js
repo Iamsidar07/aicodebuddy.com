@@ -1,8 +1,22 @@
 import React from 'react'
-import Image from 'next/image'
+import Lottie from 'react-lottie';
+import animationUrl from "../public/running-dog.json"
 const Loading = () => {
-  return (
-    <Image src={"/flickr-loading.gif"} alt="loading" width={100} height={100} />
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationUrl,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
+  return (<>
+    <Lottie
+    options={defaultOptions}
+    height={150}
+    width={150}
+    />
+  </>
   )
 }
 

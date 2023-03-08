@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 
 const Features = () => {
     return (
-        <div className="flex items-center justify-center flex-wrap max-w-5xl">
+        <div className="flex items-center justify-evenly flex-wrap max-w-7xl">
 
             <Link href="/" className={styles.card}>
                <Fade bottom>

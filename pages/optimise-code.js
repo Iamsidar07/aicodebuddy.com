@@ -30,7 +30,7 @@ const OptimiseCode = () => {
             const data = await response.json();
             if (response.status !== 200) {
                 toast.error('Oops! something went wrong', {
-                    position: "bottom-center",
+                    position: "top-left",
                     autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: true,
@@ -41,7 +41,7 @@ const OptimiseCode = () => {
                 });
                 throw data.error || new Error(`Request failed with status ${response.status}`);
             }
-            setResult(data.result);
+            setResult(data.result.replaceAll('\n', '<br/>'));
             setCode("");
         } catch (error) {
             // Consider implementing your own error handling logic here
