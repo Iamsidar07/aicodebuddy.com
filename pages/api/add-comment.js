@@ -30,7 +30,7 @@ export default async function (req, res) {
         const completion = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: generatePrompt(code),
-            temperature: 0.6,
+            temperature: 0.9,
             max_tokens: 2000,
         });
         res.status(200).json({ result: completion.data.choices[0].text });
@@ -52,6 +52,7 @@ export default async function (req, res) {
 
 function generatePrompt(code) {
     
-    return `rewrite the code with comments. Here is the code:
+    return `Rewrite this whole  code with polite comments. Code is given below
+
     ${code}`;
 }

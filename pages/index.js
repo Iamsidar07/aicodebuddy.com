@@ -71,6 +71,7 @@ export default function Home() {
         {
           loading && <Loading />
         }
+
         {
           result && <Result result={result} />
         }

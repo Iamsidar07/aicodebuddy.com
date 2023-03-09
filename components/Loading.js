@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Lottie from 'react-lottie';
+// import animationUrl from "../public/fire.json"
 import animationUrl from "../public/running-dog.json"
 const Loading = () => {
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -10,11 +12,12 @@ const Loading = () => {
       preserveAspectRatio: "xMidYMid slice"
     }
   };
+
   return (<>
     <Lottie
     options={defaultOptions}
-    height={150}
-    width={150}
+    height={120}
+    width={120}
     />
   </>
   )
