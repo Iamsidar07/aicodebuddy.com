@@ -1,23 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import Lottie from 'react-lottie';
-// import animationUrl from "../public/fire.json"
-import animationUrl from "../public/running-dog.json"
+import animationUrl1 from "../public/fire.json"
+import animationUrl2 from "../public/running-dog-2.json"
 const Loading = () => {
+
 
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: animationUrl,
+    animationData:animationUrl2,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice"
     }
   };
 
+
+
   return (<>
     <Lottie
     options={defaultOptions}
-    height={120}
-    width={120}
+    height={200}
+    width={200}
     />
   </>
   )
