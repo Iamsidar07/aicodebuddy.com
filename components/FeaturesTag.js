@@ -14,12 +14,12 @@ let Links = [
 const FeaturesTag = () => {
 
     return (
-        <div className={"w-full  max-w-5xl mx-auto p-2   mt-2 "}>
+        <div className={"w-full  max-w-5xl mx-auto p-1 mt-2 "}>
             <ul className="flex items-center justify-center  flex-wrap">
                 {Links.map((link) => (
                     <li
                         key={link.id}
-                        className={` group whitespace-nowrap  text-left py-1.5 px-4 rounded-full transition-all ease-in duration-100 cursor-pointer text-sm m-1 ${link.bg} `}
+                        className={` group whitespace-nowrap  text-left py-1.5 px-4 rounded-full transition-all ease-in duration-100 cursor-pointer text-xs sm:text-sm m-1 ${link.bg} `}
                     >
                         <Link href={link.link}>
                             {link.name}
