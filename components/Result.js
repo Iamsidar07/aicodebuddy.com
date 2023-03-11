@@ -15,7 +15,7 @@ const Result = ({result}) => {
         </div>
           <FiCopy color='white' size={20} className="absolute top-3 right-3 cursor-pointer" onClick={(e) => copyToClipboard(result)} />
           <div
-          className="mr-1 mt-9 break-words"
+          className="mr-1 mt-5 break-words"
           dangerouslySetInnerHTML={{ __html: result.replaceAll('\n', '<br/>') }}
           />
       </div>
