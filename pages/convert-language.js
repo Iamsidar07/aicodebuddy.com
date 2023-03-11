@@ -6,7 +6,8 @@ import Form from '../components/Form';
 import Intro from '../components/Intro';
 import Loading from '../components/Loading';
 import Result from '../components/Result';
-
+import SvgBg from '../components/SvgBg';
+import { playSound } from "../lib"
 const ConvertLanguage = () => {
     const [code, setCode] = useState("");
     const [result, setResult] = useState("");
@@ -19,7 +20,6 @@ const ConvertLanguage = () => {
             return;
         }
         setLoading(true);
-        console.log(language)
         try {
             const response = await fetch("/api/convert-into-another-language", {
                 method: "POST",
@@ -43,8 +43,9 @@ const ConvertLanguage = () => {
                 });
                 throw data.error || new Error(`Request failed with status ${response.status}`);
             }
-            setResult(data.result.replaceAll('\n', '<br/>'));
+            setResult(data.result);
             setCode("");
+            playSound();
         } catch (error) {
             // Consider implementing your own error handling logic here
             console.error(error);
@@ -55,8 +56,9 @@ const ConvertLanguage = () => {
     }
     return (
         <div className="p-2 md:px-8">
-            <main className="min-h-screen py-4 flex flex-1 flex-col justify-center items-center ">
+            <main className="h-full py-4 flex flex-1 flex-col justify-center items-center ">
                 <Intro tagline='Convert your code into another programming language.' />
+                <SvgBg />
                 <Form name={"code"} btnText={"Conert Language"} onSubmit={onSubmit} value={code} btnTextIfLoading={"Converting..."} setValueHook={setCode} loading={loading} isSelectInput={true} language={language} setLanguage={setLanguage} />
                 {
                     loading && <Loading />

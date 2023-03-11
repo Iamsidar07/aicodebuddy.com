@@ -26,12 +26,18 @@ function MyApp({ Component, pageProps }) {
   return <>
     <Head>
       <meta name="google-site-verification" content="ov7Bey3q-3Oik96i5soxIG-HXH4B9JBSXXe11_XveJs" />
-      <title>Aicodebuddy.com || Your Online Coder Friend</title>
-      <meta name="description" content="Improve your coding experience with our website! Our platform offers a variety of useful features including the ability to add comments to your code, easily fix bugs, convert code into different languages, and refactor your existing code. " />
+
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Upgrade your coding skills with our website! Our platform enables you to comment on code, fix bugs, convert to multiple languages, and refactor existing code. Join us today for an enhanced coding experience" />
+      <meta name="keywords" content="reactjs,nextjs,c,cpp,javascript,coding, programming, website development, code commenting, bug fixing, language conversion, code refactoring, coding skills, software development, web development, coding tutorials, coding resources, coding community, coding challenges, code optimization, coding standards, coding best practices, coding languages, coding frameworks, coding libraries." />
+      <title>Revamp Your Coding Skills: Enhance Your Coding Experience with AiCodeBuddy.com</title>
+
       <link rel="icon" href="/robot.png" />
     </Head>
     {/* <!-- Google tag (gtag.js) --> */}
-   
+
     <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-ZKSXVL88DL" />
     <Script
       id='google-analytics'
@@ -48,13 +54,11 @@ function MyApp({ Component, pageProps }) {
       }}
     />
 
-    
-    <Navbar/>
-    <ToastContainer/>
 
+    <Navbar />
+    <ToastContainer />
     <Component {...pageProps} />
-
-    <Footer/>
+    <Footer />
   </>
 }
 

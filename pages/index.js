@@ -6,11 +6,14 @@ import Form from '../components/Form';
 import Intro from '../components/Intro';
 import Loading from '../components/Loading';
 import Result from '../components/Result';
-
+import SvgBg from '../components/SvgBg';
+import { playSound } from "../lib"
 export default function Home() {
   const [code, setCode] = useState("");
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
+
+
 
   async function onSubmit(event) {
     event.preventDefault();
@@ -41,8 +44,9 @@ export default function Home() {
         });
         throw data.error || new Error(`Request failed with status ${response.status}`);
       }
-      setResult(data.result.replaceAll('\n','<br/>'));
+      setResult(data.result);
       setCode("");
+      playSound();
     } catch (error) {
       // Consider implementing your own error handling logic here
       toast.error(error, {
@@ -63,9 +67,10 @@ export default function Home() {
   }
 
   return (
-    <div className="p-2">
-      <main className="min-h-screen py-4 flex flex-1 flex-col justify-center items-center ">
+    <div className="p-2 md:px-8">
+      <main className="h-full py-4 flex flex-1 flex-col justify-center items-center ">
         <Intro tagline='Add comments into your code.' />
+        <SvgBg />
         <Form name={"code"} btnText={"Add Comment"} onSubmit={onSubmit} value={code} btnTextIfLoading={"Adding comment..."} setValueHook={setCode} loading={loading} />
         {
           loading && <Loading />

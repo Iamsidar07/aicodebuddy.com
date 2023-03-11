@@ -6,7 +6,8 @@ import Form from '../components/Form';
 import Intro from '../components/Intro';
 import Loading from '../components/Loading';
 import Result from '../components/Result';
-
+import SvgBg from '../components/SvgBg';
+import { playSound } from "../lib"
 const FixBug = () => {
     const [code, setCode] = useState("");
     const [result, setResult] = useState("");
@@ -40,8 +41,9 @@ const FixBug = () => {
                 });
                 throw data.error || new Error(`Request failed with status ${response.status}`);
             }
-            setResult(data.result.replaceAll('\n', '<br/>'));
+            setResult(data.result);
             setCode("");
+            playSound();
         } catch (error) {
             // Consider implementing your own error handling logic here
             console.error(error);
@@ -53,8 +55,9 @@ const FixBug = () => {
 
     return (
         <div className="p-2 md:px-8">
-            <main className="min-h-screen py-4 flex flex-1 flex-col justify-center items-center ">
+            <main className="h-full py-4 flex flex-1 flex-col justify-center items-center ">
                 <Intro tagline='Fix the bugs in your code.' />
+                <SvgBg />
                 <Form name={"code"} btnText={"Fix bug"} onSubmit={onSubmit} value={code} btnTextIfLoading={"Fixing bugs..."} setValueHook={setCode} loading={loading} />
                 {
                     loading && <Loading />
