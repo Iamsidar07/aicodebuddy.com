@@ -52,7 +52,7 @@ const Features = () => {
             <Link href="/explain-code" className={styles.card}>
                 <Fade bottom>
                     <h2 className='font-bold'>Explain the code &rarr;</h2>
-                    <p>This feature simplifies complex code for easy understanding by breaking it down into simpler terms. It's a great tool for both beginners and experts to help communicate code concepts more effectively.</p>
+                    <p>This feature simplifies complex code for easy understanding by breaking it down into simpler terms. It is a great tool for both beginners and experts to help communicate code concepts more effectively.</p>
                 </Fade>
             </Link>
             <Link
