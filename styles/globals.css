@@ -38,13 +38,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Ubuntu','ColfaxAI', sans-serif;
-  font-family: 'Poppins', sans-serif;
- font-family: 'Fuzzy Bubbles', cursive;
+  
+ font-family: 'Fuzzy Bubbles','Poppins','Ubuntu','ColfaxAI',sans-serif;
 
 
 
-font-family: 'Jim Nightshade', cursive;
+
 
 
 }
