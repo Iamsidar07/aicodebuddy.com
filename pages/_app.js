@@ -27,12 +27,12 @@ function MyApp({ Component, pageProps }) {
     <Head>
       <meta name="google-site-verification" content="ov7Bey3q-3Oik96i5soxIG-HXH4B9JBSXXe11_XveJs" />
 
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta charSet="UTF-8" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content="Upgrade your coding skills with our website! Our platform enables you to comment on code, fix bugs, convert to multiple languages, and refactor existing code. Join us today for an enhanced coding experience" />
-      <meta name="keywords" content="reactjs,nextjs,c,cpp,javascript,coding, programming, website development, code commenting, bug fixing, language conversion, code refactoring, coding skills, software development, web development, coding tutorials, coding resources, coding community, coding challenges, code optimization, coding standards, coding best practices, coding languages, coding frameworks, coding libraries." />
-      <title>Revamp Your Coding Skills: Enhance Your Coding Experience with AiCodeBuddy.com</title>
+      <meta name="keywords" content=" coding,programming, website development, code commenting, bug fixing, language conversion, code refactoring, coding skills, software development, web development, coding tutorials, coding resources, coding community, coding challenges, code optimization, coding standards, coding best practices, coding languages, coding frameworks, coding libraries." />
+      <title>Aicodebuddy.com|Revamp Your Coding Skills.</title>
 
       <link rel="icon" href="/robot.png" />
     </Head>

@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 const Form = ({ value, onSubmit, setValueHook, btnText, btnTextIfLoading = "loading...", name, loading, isSelectInput = false, language, setLanguage }) => {
   return (
     <Fade bottom>
-      <form onSubmit={onSubmit} className="w-full text-center flex flex-col  md:flex-row max-w-7xl mx-auto space-y-4 md:space-x-2 md:space-y-0 mt-5 ">
+      <form onSubmit={onSubmit} className="w-full text-center flex flex-col  md:flex-row max-w-7xl mx-auto space-y-4 md:space-x-2 md:space-y-0 mt-5">
         <Input value={value} setValueHook={setValueHook} />
         {
           isSelectInput && <Select language={language} setLanguage={setLanguage} />

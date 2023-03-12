@@ -1,0 +1,42 @@
+< !--public / sitemap.xml-- >
+    <xml version="1.0" encoding="UTF-8">
+        <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+            <url>
+                <loc>http://www.aicodebuddy.com/</loc>
+                <lastmod>2023-02-01</lastmod>
+            </url>
+            <url>
+                <loc>https://www.aicodebuddy.com/explain-code</loc>
+                <lastmod>2023-02-01</lastmod>
+            </url>
+            <url>
+                <loc>https://www.aicodebuddy.com/refactor-code</loc>
+                <lastmod>2023-02-01</lastmod>
+            </url>
+            <url>
+                <loc>https://www.aicodebuddy.com/optimise-code</loc>
+                <lastmod>2023-02-01</lastmod>
+            </url>
+            <url>
+                <loc>https://www.aicodebuddy.com/fix-bug</loc>
+                <lastmod>2023-02-01</lastmod>
+            </url>
+            <url>
+                <loc>https://www.aicodebuddy.com/convert-language</loc>
+                <lastmod>2023-02-01</lastmod>
+            </url>
+            <url>
+                <loc>https://www.aicodebuddy.com/why-code-is-not-working</loc>
+                <lastmod>2023-02-01</lastmod>
+            </url>
+            <url>
+                <loc>https://www.instagram.com/iamsidar07/</loc>
+                <lastmod>2023-02-01</lastmod>
+            </url>
+            <url>
+                <loc>https://www.twitter.com/iamsidar07/</loc>
+                <lastmod>2023-02-01</lastmod>
+            </url>
+            
+        </urlset>
+    </xml>
