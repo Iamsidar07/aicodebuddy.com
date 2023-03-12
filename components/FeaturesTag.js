@@ -19,7 +19,7 @@ const FeaturesTag = () => {
                 {Links.map((link) => (
                     <li
                         key={link.id}
-                        className={` group whitespace-nowrap  text-left py-1.5 px-4 rounded-full transition-all ease-in duration-100 cursor-pointer text-xs sm:text-sm m-1 ${link.bg} `}
+                        className={` group whitespace-nowrap  text-left py-2.5 px-4 rounded-full transition-all ease-in duration-100 cursor-pointer text-xs sm:text-sm m-1 ${link.bg} `}
                     >
                         <Link href={link.link}>
                             #{link.name}

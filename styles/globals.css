@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Jim+Nightshade&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -39,7 +39,7 @@ body {
   padding: 0;
   margin: 0;
   
- font-family: 'Fuzzy Bubbles','Poppins','Ubuntu','ColfaxAI',sans-serif;
+ font-family: 'Poppins','Ubuntu','ColfaxAI',sans-serif;
 
 
 
