@@ -31,7 +31,7 @@ const OptimiseCode = () => {
             const data = await response.json();
             if (response.status !== 200) {
                 toast.error('Oops! something went wrong', {
-                    position: "top-left",
+                    position: "top-center",
                     autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: true,

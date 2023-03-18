@@ -33,7 +33,7 @@ export default function Home() {
       const data = await response.json();
       if (response.status !== 200) {
         toast.error('Oops! something went wrong', {
-          position: "top-left",
+          position: "top-center",
           autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -50,7 +50,7 @@ export default function Home() {
     } catch (error) {
       // Consider implementing your own error handling logic here
       toast.error(error, {
-        position: "top-left",
+        position: "top-center",
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
