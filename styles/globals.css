@@ -8,12 +8,12 @@
 
 @font-face {
   font-family: "ColfaxAI";
-  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
-      format("woff2"),
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2) format("woff2"),
     url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "ColfaxAI";
   src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
@@ -38,13 +38,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  
- font-family: 'Poppins','Ubuntu','ColfaxAI',sans-serif;
-
-
-
-
-
+  font-family: 'Poppins', 'Ubuntu', 'ColfaxAI', sans-serif;
 
 }
 
@@ -57,12 +51,30 @@ a {
   box-sizing: border-box;
 }
 
+.btn {
+  background-color: #2190FF;
+
+}
+
+.text-gradient {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, #4ca5ff 2.34%, #b673f8 100.78%);
+  -webkit-background-clip: text;
+}
+
+.gradient {
+  background: rgb(22, 27, 34);
+  background: linear-gradient(45deg, rgba(22, 27, 34, 1) 70%, rgba(13, 17, 23, 1) 91%);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
-    background: #121212;
+    background: #0d1117;
   }
 }
+

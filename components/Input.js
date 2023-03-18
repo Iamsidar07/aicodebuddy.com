@@ -8,7 +8,7 @@ const Input = ({value,setValueHook}) => {
           placeholder="Paste your code here..."
           value={value}
           onChange={(e) => setValueHook(e.target.value)}
-      className="text-base leading-6 text-gray-200 px-4 sm:px-14 py-6 flex-1 rounded-lg sm:rounded-full outline-none bg-[#1E272C]"
+      className="text-base leading-6 text-gray-200 px-4 sm:px-14 py-6 flex-1 rounded-lg sm:rounded-full outline-none bg-[#212933]"
       />
   )
 }

@@ -7,15 +7,16 @@ const Result = ({result}) => {
   
   return (
     <Fade bottom>
-      <div className={"w-full  max-w-7xl mx-auto p-2 md:p-6 bg-[#1E272C] my-6 relative rounded-lg"}>
+      <div className={"w-full  max-w-7xl mx-auto p-3 md:p-6 gradient my-6 relative rounded-lg"}>
         <div className="absolute top-3 left-3 flex items-center gap-1">
-          <div className=" w-4 h-4 rounded-full bg-[#FF5F5A]" />
-          <div className=" w-4 h-4 rounded-full bg-[#FFBE2E]" />
-          <div className=" w-4 h-4 rounded-full bg-[#2ACA44]" />
+          <div className=" w-3 h-3 rounded-full bg-[#FF6059]" />
+          <div className=" w-3 h-3 rounded-full bg-[#FABF2F]" />
+          <div className=" w-3 h-3 rounded-full bg-[#28C941]" />
         </div>
+
           <FiCopy color='white' size={20} className="absolute top-3 right-3 cursor-pointer" onClick={(e) => copyToClipboard(result)} />
           <div
-          className="mr-1 mt-2 break-words"
+          className="mr-1 mt-2 break-words text-[#6d95b5]"
           dangerouslySetInnerHTML={{ __html: result.replaceAll('\n', '<br/>') }}
           />
       </div>

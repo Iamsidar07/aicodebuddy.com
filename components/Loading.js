@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Lottie from 'react-lottie';
 import animationUrl1 from "../public/fire.json"
-import animationUrl2 from "../public/running-dog-2.json"
+import animationUrl2 from "../public/running-dog-3.json"
 const Loading = () => {
 
 
