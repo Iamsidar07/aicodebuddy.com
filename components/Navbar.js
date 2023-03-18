@@ -29,7 +29,7 @@ const Navbar = () => {
             <Link href="https://instagram.com/iamsidar07" target={"_blank"}>
               <div className="gradient rounded-lg p-1">
                 <Image
-                  src={"/instagram-1.png"}
+                  src={"/Instagram-1.png"}
                   width={35}
                   height={35}
                   alt="logo"
@@ -41,7 +41,7 @@ const Navbar = () => {
             <Link href="https://twitter.com/iamsidar07" target={"_blank"}>
               <div className="gradient rounded-lg p-1">
                 <Image
-                  src={"/twitter-1.png"}
+                  src={"/Twitter-1.png"}
                   width={35}
                   height={35}
                   alt="logo"
