@@ -11,7 +11,7 @@ const Features = () => {
             <Link href="/" className={styles.card}>
                 <Fade bottom>
                     <div className="w-20 h-20 rounded-full my-3 bg-blue-500 flex items-center justify-center text-white font-bold text-3xl">🗨️</div>
-                    <h2 className='font-bold'>Comment on code &rarr;</h2>
+                    <h2 className='font-bold'>Add Comments in your code &rarr;</h2>
                     <p>This feature allows users to add comments to lines of code, making it easier for other developers to understand and follow the code.</p>
                 </Fade>
             </Link>
