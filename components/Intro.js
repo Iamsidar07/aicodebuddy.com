@@ -7,7 +7,7 @@ const Intro = ({ tagline = "Add comments into your code." }) => {
         <Fade bottom>
         <div>
             <h1 className="text-3xl md:text-7xl text-center mt-10 md:mt-16 font-extrabold">
-                    Welcome to <span className='text-gradient text-6xl'>AiCodeBuddy.com</span>
+                    Welcome to <span className='text-gradient text-5xl'>AiCodeBuddy.com</span>
             </h1>
                 <p className="text-center mt-5 text-lg md:text-3xl text-[#D0DFFF]">
                 {tagline}
