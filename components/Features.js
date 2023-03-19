@@ -46,7 +46,7 @@ const Features = () => {
                 className={styles.card}
             >
                 <Fade bottom>
-                    <div className="w-20 h-20 rounded-full my-3 bg-[#f20565] flex items-center justify-center text-white font-bold text-3xl">🐜</div>
+                    <div className="w-20 h-20 rounded-full my-3 bg-[#f20565] flex items-center justify-center text-white font-bold text-3xl">🐛</div>
                     <h2 className='font-bold'>Fix bugs &rarr;</h2>
                     <p>
                         This feature provides users with tools to identify and fix bugs in code, improving the overall functionality and reliability of the software.
