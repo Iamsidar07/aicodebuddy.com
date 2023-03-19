@@ -39,7 +39,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family:'Urbanist', 'Poppins', 'Ubuntu', 'ColfaxAI', sans-serif;
+  font-family: 'Urbanist', 'Poppins', 'Ubuntu', 'ColfaxAI', sans-serif;
 
 }
 
@@ -59,10 +59,9 @@ a {
 
 .text-gradient {
   -webkit-text-fill-color: transparent;
-  background: linear-gradient(90deg, #4ca5ff 2.34%, #b673f8 100.78%);
+  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
   -webkit-background-clip: text;
 }
-
 .gradient {
   background: rgb(22, 27, 34);
   background: linear-gradient(45deg, rgba(22, 27, 34, 1) 70%, rgba(13, 17, 23, 1) 91%);
@@ -78,4 +77,3 @@ a {
     background: #0d1117;
   }
 }
-

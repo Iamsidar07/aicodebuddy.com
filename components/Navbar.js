@@ -14,13 +14,13 @@ const Navbar = () => {
             <Link href={"/"} >
               <div className="flex items-center">
                 <Image
-                  src={"/robot.png"}
-                  width={20}
-                  height={20}
+                  src={"/logo.png"}
+                  width={50}
+                  height={50}
                   alt="logo"
                 />
 
-                <span>AiCodeBuddy.com</span></div>
+                <span className="font-bold">AiCodeBuddy.com</span></div>
             </Link>
 
 

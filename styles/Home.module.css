@@ -91,12 +91,14 @@
   background: rgb(22, 27, 34);
   background: linear-gradient(90deg, rgba(22, 27, 34, 1) 44%, rgba(13, 17, 23, 1) 71%);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  
 }
 
 .card h2 {
   margin: 0 0 1rem 0;
   font-size: 1.55rem;
   color: #D0DFFF;
+  font-weight: bold;
 }
 
 .card p {

@@ -17,13 +17,13 @@ const Footer = () => {
           <p className="text-xs">All Rights Reserved &#169; {new Date().getFullYear()} </p>
         </div>
 
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-1">
           <span className='text-xs'>powered by</span>
           <Image
-            src={"/robot.png"}
-            width={20}
+            src={"/logo.png"}
+            width={30}
             height={20}
-            alt="menu"
+            alt="logo"
           />
           <span className='text-xs'>aicodebuddy.com</span></div>
 
