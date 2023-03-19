@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }) {
       <meta name="keywords" content=" coding,programming, website development, code commenting, bug fixing, language conversion, code refactoring, coding skills, software development, web development, coding tutorials, coding resources, coding community, coding challenges, code optimization, coding standards, coding best practices, coding languages, coding frameworks, coding libraries." />
       <title>Aicodebuddy.com|Revamp Your Coding Skills.</title>
 
-      <link rel="icon" href="/robot.png" />
+      <link rel="icon" href="/logo.png" />
     </Head>
     {/* <!-- Google tag (gtag.js) --> */}
 
