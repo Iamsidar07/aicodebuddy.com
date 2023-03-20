@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Features from '../components/Features';
 import Form from '../components/Form';
 import Intro from '../components/Intro';
 import Loading from '../components/Loading';
@@ -45,7 +44,7 @@ const FixBug = () => {
             setCode("");
             playSound();
         } catch (error) {
-            // Consider implementing your own error handling logic here
+            
             console.error(error);
             alert(error.message);
         } finally {
@@ -66,7 +65,6 @@ const FixBug = () => {
                 {
                     result && <Result result={result} />
                 }
-                <Features />
             </main>
 
 

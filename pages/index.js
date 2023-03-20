@@ -1,84 +1,46 @@
-import { useState } from 'react';
-import { toast } from 'react-toastify';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Fade } from 'react-reveal';
 import 'react-toastify/dist/ReactToastify.css';
 import Features from '../components/Features';
-import Form from '../components/Form';
-import Intro from '../components/Intro';
-import Loading from '../components/Loading';
-import Result from '../components/Result';
+import FeaturesTag from '../components/FeaturesTag';
 import SvgBg from '../components/SvgBg';
-import { playSound } from "../lib"
+
 export default function Home() {
-  const [code, setCode] = useState("");
-  const [result, setResult] = useState("");
-  const [loading, setLoading] = useState(false);
-
-
-
-  async function onSubmit(event) {
-    event.preventDefault();
-    if (loading) {
-      return;
-    }
-    setLoading(true);
-    try {
-      const response = await fetch("/api/add-comment", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ code }),
-      });
-
-      const data = await response.json();
-      if (response.status !== 200) {
-        toast.error('Oops! something went wrong', {
-          position: "top-center",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-        });
-        throw data.error || new Error(`Request failed with status ${response.status}`);
-      }
-      setResult(data.result);
-      setCode("");
-      playSound();
-    } catch (error) {
-      // Consider implementing your own error handling logic here
-      toast.error(error, {
-        position: "top-center",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
-      console.error(error);
-      alert(error.message);
-    } finally {
-      setLoading(false);
-    }
-  }
 
   return (
-    <div className="p-2 md:px-8">
+    <div className="p-3 md:px-8">
       <main className="h-full py-4 flex flex-1 flex-col justify-center items-center ">
-        <Intro tagline='Add comments into your code.' />
-        <SvgBg />
-        <Form name={"code"} btnText={"Add Comment"} onSubmit={onSubmit} value={code} btnTextIfLoading={"Adding comment..."} setValueHook={setCode} loading={loading} />
-        {
-          loading && <Loading />
-        }
+        <div className='max-w-7xl mx-auto flex flex-col sm:flex-row items-center sm:items-start justify-center  '>
+          <Fade left>
+            <div className='max-w-xl'>
+              <h1 className="text-5xl md:text-7xl  mt-4 md:mt-16 font-bold">
+                Revamp Your <span className='text-gradient'>Coding Skills</span> <br /> with us
+              </h1>
+              <p className="mt-5  text-[#D0DFFF] max-w-lg">
+                Upgrade your coding skills with our aicodebuddy.com Our platform enables you to comment on code, fix bugs, convert to multiple languages, and refactor existing code.
+              </p>
+              <FeaturesTag />
+              <Link href={"/explain-code"}>
+                <p className=' text-white btn border-none rounded-full text-center cursor-pointer px-8 py-4 max-w-[200px] mt-4'>Explain Code</p>
+              </Link>
+            </div>
+          </Fade>
+          <div>
+            <Fade right>
+              <Image
+                src={"/herobg.webp"}
+                alt="herobg"
+                className='w-full h-full object-contain'
+                width={1920}
+                height={1080}
 
-        {
-          result && <Result result={result} />
-        }
+              />
+            </Fade>
+          </div>
+
+        </div>
+        <SvgBg />
         <Features />
       </main>
     </div>

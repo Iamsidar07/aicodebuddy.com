@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Features from '../components/Features';
 import Loading from '../components/Loading';
 import Result from '../components/Result';
 import Intro from '../components/Intro';
@@ -45,7 +44,7 @@ const WhyCodeIsNotWorking = () => {
             setCode("");
             playSound();
         } catch (error) {
-            // Consider implementing your own error handling logic here
+            
             console.error(error);
             alert(error.message);
         } finally {
@@ -56,7 +55,7 @@ const WhyCodeIsNotWorking = () => {
     return (
         <div className="p-2 md:px-8">
             <main className="h-full py-4 flex flex-1 flex-col justify-center items-center ">
-                <Intro tagline='Why my code is not working ?' />
+                <Intro tagline='Find Bugs in Code' />
                 <SvgBg/>
                 <Form name={"code"} btnText={"Know reason"} onSubmit={onSubmit} value={code} btnTextIfLoading={"processing..."} setValueHook={setCode} loading={loading} />
                 {
@@ -66,7 +65,6 @@ const WhyCodeIsNotWorking = () => {
                 {
                     result && <Result result={result} />
                 }
-                <Features />
             </main>
 
 

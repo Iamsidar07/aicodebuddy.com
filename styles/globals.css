@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -39,7 +40,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Urbanist', 'Poppins', 'Ubuntu', 'ColfaxAI', sans-serif;
+  font-family: 'Montserrat','Urbanist', 'Poppins', 'Ubuntu', 'ColfaxAI', sans-serif;
 
 }
 
@@ -66,6 +67,9 @@ a {
   background: rgb(22, 27, 34);
   background: linear-gradient(45deg, rgba(22, 27, 34, 1) 70%, rgba(13, 17, 23, 1) 91%);
 }
+.gradientbtn{
+  background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+}
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -73,7 +77,7 @@ a {
   }
 
   body {
-    color: white;
+    color: #D0DFFF;
     background: #0d1117;
   }
 }

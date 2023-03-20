@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Features from '../components/Features';
 import Form from '../components/Form';
 import Intro from '../components/Intro';
 import Loading from '../components/Loading';
@@ -47,7 +46,6 @@ const ConvertLanguage = () => {
             setCode("");
             playSound();
         } catch (error) {
-            // Consider implementing your own error handling logic here
             console.error(error);
             alert(error.message);
         } finally {
@@ -57,7 +55,7 @@ const ConvertLanguage = () => {
     return (
         <div className="p-2 md:px-8">
             <main className="h-full py-4 flex flex-1 flex-col justify-center items-center ">
-                <Intro tagline='Convert your code into another programming language.' />
+                <Intro tagline='Convert your code to multiple programming languages.' />
                 <SvgBg />
                 <Form name={"code"} btnText={"Conert Language"} onSubmit={onSubmit} value={code} btnTextIfLoading={"Converting..."} setValueHook={setCode} loading={loading} isSelectInput={true} language={language} setLanguage={setLanguage} />
                 {
@@ -67,7 +65,7 @@ const ConvertLanguage = () => {
                 {
                     result && <Result result={result} />
                 }
-                <Features />
+
             </main>
         </div>
     )

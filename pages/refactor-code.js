@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Features from '../components/Features';
 import Form from '../components/Form';
 import Intro from '../components/Intro';
 import Loading from '../components/Loading';
@@ -56,8 +55,8 @@ const RefactorCode = () => {
     return (
         <div className="p-2 md:px-8">
             <main className="h-full py-4 flex flex-1 flex-col justify-center items-center ">
-                <Intro tagline='Refactor your code in just one click.' />
-                <SvgBg/>
+                <Intro tagline='Refactor Existing Code.' />
+                <SvgBg />
                 <Form name={"code"} btnText={"Refactor code"} onSubmit={onSubmit} value={code} btnTextIfLoading={"processing..."} setValueHook={setCode} loading={loading} />
                 {
                     loading && <Loading />
@@ -67,7 +66,7 @@ const RefactorCode = () => {
                     result && <Result result={result} />
 
                 }
-                <Features />
+
             </main>
         </div>
     )

@@ -5,7 +5,7 @@ import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai';
 
 const Navbar = () => {
   return (
-    <nav className={` bg-[#0D1117] sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20]`}>
+    <nav className={` bg-[#0D1117] sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20] bg-opacity-95`}>
       <div className="max-w-7xl mx-auto p-2">
         <div className="flex  items-center justify-between px-1 ">
 
@@ -19,7 +19,6 @@ const Navbar = () => {
                   height={50}
                   alt="logo"
                 />
-
                 <span className="font-bold">AiCodeBuddy.com</span></div>
             </Link>
 

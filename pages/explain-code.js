@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Features from '../components/Features';
 import Form from '../components/Form';
 import Intro from '../components/Intro';
 import Loading from '../components/Loading';
@@ -45,7 +44,7 @@ const ExplainCode = () => {
             setCode("");
             playSound();
         } catch (error) {
-            // Consider implementing your own error handling logic here
+            
             console.error(error);
             alert(error.message);
         } finally {
@@ -56,7 +55,7 @@ const ExplainCode = () => {
     return (
         <div className="p-2 md:px-8">
             <main className="h-full py-4 flex flex-1 flex-col justify-center items-center ">
-                <Intro tagline='Explain the code in Easy and simple language.' />
+                <Intro tagline='Explain the code like a kid.' />
                 <SvgBg />
                 <Form name={"code"} btnText={"Explain Code"} onSubmit={onSubmit} value={code} btnTextIfLoading={"processing..."} setValueHook={setCode} loading={loading} />
                 {
@@ -66,7 +65,6 @@ const ExplainCode = () => {
                 {
                     result && <Result result={result} />
                 }
-                <Features />
             </main>
         </div>
     )

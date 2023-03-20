@@ -7,10 +7,12 @@ import Loading from '../components/Loading';
 import Result from '../components/Result';
 import SvgBg from '../components/SvgBg';
 import { playSound } from "../lib"
-const OptimiseCode = () => {
+export default function AddComments() {
     const [code, setCode] = useState("");
     const [result, setResult] = useState("");
     const [loading, setLoading] = useState(false);
+
+
 
     async function onSubmit(event) {
         event.preventDefault();
@@ -19,7 +21,7 @@ const OptimiseCode = () => {
         }
         setLoading(true);
         try {
-            const response = await fetch("/api/optimise-code", {
+            const response = await fetch("/api/add-comment", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -45,7 +47,16 @@ const OptimiseCode = () => {
             setCode("");
             playSound();
         } catch (error) {
-            
+            toast.error(error, {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
             console.error(error);
             alert(error.message);
         } finally {
@@ -56,20 +67,17 @@ const OptimiseCode = () => {
     return (
         <div className="p-2 md:px-8">
             <main className="h-full py-4 flex flex-1 flex-col justify-center items-center ">
-                <Intro tagline='Optimise Your Code.' />
-                <SvgBg/>
-                <Form name={"code"} btnText={"Optimise code"} onSubmit={onSubmit} value={code} btnTextIfLoading={"Optimising..."} setValueHook={setCode} loading={loading} />
+                <Intro tagline='Add comments in your code.' />
+                <SvgBg />
+                <Form name={"code"} btnText={"Add Comment"} onSubmit={onSubmit} value={code} btnTextIfLoading={"Adding comment..."} setValueHook={setCode} loading={loading} />
                 {
                     loading && <Loading />
                 }
 
                 {
                     result && <Result result={result} />
-
                 }
             </main>
         </div>
     )
 }
-
-export default OptimiseCode
