@@ -138,7 +138,7 @@
 
   .card {
     margin: 1rem 0;
-    padding: 0.75rem;
+    padding: 5px;
     background: rgb(22, 27, 34);
     background: linear-gradient(90deg, rgba(22, 27, 34, 1) 44%, rgba(13, 17, 23, 1) 71%);
     max-width: 390px;
