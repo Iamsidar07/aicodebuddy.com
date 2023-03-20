@@ -22,7 +22,7 @@ export default function Home() {
               </p>
               <FeaturesTag />
               <Link href={"/explain-code"}>
-                <p className=' text-white btn border-none rounded-full text-center cursor-pointer px-8 py-4 max-w-[200px] mt-4'>Explain Code</p>
+                <p className=' text-white btn border-none rounded-full text-center cursor-pointer px-8 py-4 max-w-[200px] my-4'>Explain Code</p>
               </Link>
             </div>
           </Fade>
