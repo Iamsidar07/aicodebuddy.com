@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai';
 
 const Navbar = () => {
   return (
@@ -12,12 +11,13 @@ const Navbar = () => {
           <div className="z-[50] py-4 px-1 ">
 
             <Link href={"/"} >
-              <div className="flex items-center">
+              <div className="flex items-center group ">
                 <Image
                   src={"/logo.png"}
                   width={50}
                   height={50}
                   alt="logo"
+                  className="group-hover:animate-bounce cursor-pointer"
                 />
                 <span className="font-bold">AiCodeBuddy.com</span></div>
             </Link>
