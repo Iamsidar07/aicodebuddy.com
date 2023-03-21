@@ -23,7 +23,7 @@ const FeaturesTag = () => {
                 {Links.map((link) => (
                     <li
                         key={link.id}
-                        className={` group whitespace-nowrap  text-left py-2.5 px-4 rounded-full transition-all ease-in duration-100 cursor-pointer text-xs sm:text-sm my-1 mr-1 font-semibold ${router.pathname === link.link ? link.bg :"gradient"}`}
+                        className={` group whitespace-nowrap  text-left py-2.5 px-4 rounded-lg transition-all ease-in duration-100 cursor-pointer text-xs sm:text-sm my-1 mr-1 font-semibold ${router.pathname === link.link ? link.bg :"gradient"}`}
                     >
                         <Link href={link.link}>
                             #{link.name}
