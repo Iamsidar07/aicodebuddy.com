@@ -2,8 +2,9 @@ import React from 'react'
 
 const SvgBg = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className=' absolute -z-10 top-[78px] left-0 right-0 ' viewBox="0 0 1440 320"><path fill="#181B21" fillOpacity="1" d="M0,256L1440,96L1440,0L0,0Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className=' absolute -z-10 top-[78px] left-0 right-0 ' ><path fill="#0d1117" fillOpacity="0.5" d="M0,160L34.3,181.3C68.6,203,137,245,206,245.3C274.3,245,343,203,411,160C480,117,549,75,617,58.7C685.7,43,754,53,823,90.7C891.4,128,960,192,1029,218.7C1097.1,245,1166,235,1234,245.3C1302.9,256,1371,288,1406,304L1440,320L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path></svg>
   )
 }
 
 export default SvgBg
+

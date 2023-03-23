@@ -5,8 +5,8 @@ import styles from '../styles/Home.module.css'
 
 const Footer = () => {
   return (
-    <footer className={`${styles.footer} border-t-[1px] border-t-[#181b21]` }>
-      <div className='w-full flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0  '>
+    <footer className={`${styles.footer} border-t-[1px] border-t-[#181b21] ` }>
+      <div className='w-full h-fit flex flex-col sm:flex-row items-center justify-center space-y-2 md:space-y-0  '>
         <div className='flex items-center flex-col  md:flex-row space-y-2 md:space-x-2 md:space-y-0 px-5 '>
           <Link href={"/privacy-policy"}>
             <p className='text-sm'>privacy and policy</p>

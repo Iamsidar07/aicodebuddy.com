@@ -14,7 +14,7 @@ export default function Home() {
         <div className='max-w-7xl mx-auto flex flex-col sm:flex-row items-center sm:items-start justify-center  '>
           <Fade left>
             <div className='max-w-xl'>
-              <h1 className="text-5xl md:text-7xl  mt-4 md:mt-16 font-bold">
+              <h1 className="text-5xl md:text-7xl  mt-4 md:mt-16 font-bold text-white">
                 Revamp Your <span className='text-gradient'>Coding Skills</span> <br /> with us
               </h1>
               <p className="mt-5  text-[#D0DFFF] max-w-lg">
@@ -22,7 +22,7 @@ export default function Home() {
               </p>
               <FeaturesTag />
               <Link href={"/explain-code"}>
-                <p className=' text-white btn border-none rounded-full text-center cursor-pointer px-8 py-4 max-w-[200px] my-4'>Explain Code</p>
+                <p className=' text-white btn border-none rounded-full text-center cursor-pointer px-8 py-4 max-w-[200px] my-4 font-semibold'>Start Explore</p>
               </Link>
             </div>
           </Fade>
@@ -42,6 +42,45 @@ export default function Home() {
         </div>
         <SvgBg />
         <Features />
+        <div className="mt-12 ">
+          <h2 className="text-white text-center text-4xl font-bold my-8">
+            Follow me here
+          </h2>
+          <div className="flex flex-row items-center justify-center gap-5">
+            <Link href={"https://www.twitter.com/iamsidar07"} target="_blank" className="p-2 rounded-full bg-[#161b22] hover:animate-bounce">
+              <Image
+                src={"/Twitter-1.png"}
+                width={100}
+                height={100}
+                alt="twitter"
+              />
+            </Link>
+            <Link href={"https://www.instagram.com/iamsidar07"} target="_blank" className="p-2 rounded-full bg-[#161b22] hover:animate-bounce">
+              <Image
+                src={"/Instagram-1.png"}
+                width={100}
+                height={100}
+                alt="insta"
+              />
+            </Link>
+            <Link href={"https://www.linkedin.com/in/manoj-kumar-72aa54222/"} target="_blank" className="p-2 rounded-full bg-[#161b22] hover:animate-bounce">
+              <Image
+                src={"/LinkedIn.png"}
+                width={100}
+                height={100}
+                alt="linkedin"
+              />
+            </Link>
+            <Link href={"https://www.linkedin.com/in/manoj-kumar-72aa54222/"} target="_blank" className="p-2 rounded-full bg-[#161b22] hover:animate-bounce">
+              <Image
+                src={"/Discord.png"}
+                width={100}
+                height={100}
+                alt="Discord"
+              />
+            </Link>
+          </div>
+        </div>
       </main>
     </div>
   )
