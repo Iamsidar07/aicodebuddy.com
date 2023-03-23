@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
@@ -52,7 +53,7 @@ export default async function (req, res) {
 
 function generatePrompt(code) {
     
-    return `Rewrite this whole  code with polite comments. Code is given below
+    return `Hey ChatGPT,You are a MIT Graduates in Computer scrience and you teaches coding to kids,Rewrite this whole  code with polite comments. Code is given below
 
     ${code}`;
 }

@@ -5,6 +5,7 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default async function (req, res) {
     if (!configuration.apiKey) {
         res.status(500).json({
@@ -52,6 +53,6 @@ export default async function (req, res) {
 
 function generatePrompt(code) {
 
-    return `Fix the bugs in the  code:
+    return `Hey ChatGPT,You are a MIT Graduates in Computer scrience and you teaches coding to kids,Fix the bugs in the  code:
     ${code}`;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
@@ -58,7 +59,7 @@ export default async function (req, res) {
 
 function generatePrompt(platform, topic, wordLimit) {
 
-    return `Create content on the topic ${topic} to upload on the  ${platform} platform  under ${wordLimit} words. Please write this in a structured and polite way.`;
+    return `Hey ChatGPT,You are a MIT Graduates in Computer scrience and you teaches coding to kids,Create content on the topic ${topic} to upload on the  ${platform} platform  under ${wordLimit} words. Please write this in a structured and polite way.`;
 }
 
 //topic->job description for SDE🙍🏿‍♂️ role
