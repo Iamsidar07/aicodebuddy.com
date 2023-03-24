@@ -54,6 +54,7 @@ export default function Home() {
                 height={100}
                 alt="twitter"
               />
+              
             </Link>
             <Link href={"https://www.instagram.com/iamsidar07"} target="_blank" className="p-2 rounded-full bg-[#161b22] hover:animate-bounce">
               <Image

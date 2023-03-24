@@ -5,10 +5,10 @@ import Image from "next/image";
 const Navbar = () => {
   return (
     <nav className={` bg-[#0d1117b9] backdrop-blur sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20] bg-opacity-95 border-b-[1px] border-b-[#181b21]`}>
-      <div className="max-w-7xl mx-auto p-2">
-        <div className="flex  items-center justify-between px-1 ">
+      <div className="max-w-7xl mx-auto px-2">
+        <div className="flex  items-center justify-between ">
 
-          <div className="z-[50] py-4 px-1 ">
+          <div className="z-[50] py-1.5 px-1 ">
 
             <Link href={"/"} >
               <div className="flex items-center group ">
@@ -26,7 +26,7 @@ const Navbar = () => {
           </div>
           <div className="flex gap-1">
             <Link href="https://instagram.com/iamsidar07" target={"_blank"}>
-              <div className="gradient rounded-lg p-1">
+              <div className="gradient rounded-lg p-0.5">
                 <Image
                   src={"/Instagram-1.png"}
                   width={35}
@@ -38,7 +38,7 @@ const Navbar = () => {
               </div>
             </Link>
             <Link href="https://twitter.com/iamsidar07" target={"_blank"}>
-              <div className="gradient rounded-lg p-1">
+              <div className="gradient rounded-lg p-0.5">
                 <Image
                   src={"/Twitter-1.png"}
                   width={35}
