@@ -19,7 +19,7 @@ const FeaturesTag = () => {
 
     return (
         <div className={"w-full  max-w-7xl mx-auto p-1 mt-2 "}>
-            <ul className="flex items-center   flex-wrap">
+            <ul className="flex items-center justify-center  flex-wrap">
                 {Links.map((link) => (
                     <li
                         key={link.id}

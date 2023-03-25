@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { Fade } from 'react-reveal';
 import 'react-toastify/dist/ReactToastify.css';
 import Features from '../components/Features';
-import FeaturesTag from '../components/FeaturesTag';
 import SvgBg from '../components/SvgBg';
 
 export default function Home() {
@@ -20,9 +19,8 @@ export default function Home() {
               <p className="mt-5  text-[#D0DFFF] max-w-lg">
                 Upgrade your coding skills with our aicodebuddy.com Our platform enables you to comment on code, fix bugs, convert to multiple languages, and refactor existing code.
               </p>
-              <FeaturesTag />
               <Link href={"/explain-code"}>
-                <p className=' text-white btn border-none rounded-full text-center cursor-pointer px-8 py-4 max-w-[200px] my-4 font-semibold'>Start Explore</p>
+                <p className=' text-white btn border-none rounded-full text-center cursor-pointer px-8 py-4 max-w-[200px] my-8 font-semibold'>Start Explore</p>
               </Link>
             </div>
           </Fade>
@@ -40,7 +38,7 @@ export default function Home() {
           </div>
 
         </div>
-        <SvgBg />
+        {/* <SvgBg /> */}
         <Features />
         <div className="mt-12 ">
           <h2 className="text-white text-center text-4xl font-bold my-8">
