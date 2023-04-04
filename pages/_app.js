@@ -30,8 +30,8 @@ function MyApp({ Component, pageProps }) {
       <meta charSet="UTF-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Upgrade your coding skills with our website! Our platform enables you to comment on code, fix bugs, convert to multiple languages, and refactor existing code. Join us today for an enhanced coding experience" />
-      <meta name="keywords" content=" coding,programming, website development, code commenting, bug fixing, language conversion, code refactoring, coding skills, software development, web development, coding tutorials, coding resources, coding community, coding challenges, code optimization, coding standards, coding best practices, coding languages, coding frameworks, coding libraries." />
+      <meta name="description" content="Upgrade your coding skills with aicodebuddy.com. Our platform enables you to comment on code, fix bugs, convert to multiple languages and refactor existing code. Join us today for an enhanced coding experience" />
+      <meta name="keywords" content="aicodebuddy,aicodebuddy.com,add comments in code,fix bugs in code,convert to multiple languages, refactor existing code, Conver code to another programming language, Explain this code, Optimise the code,find bugs in code, coding tool" />
       <title>Aicodebuddy.com|Revamp Your Coding Skills.</title>
 
       <link rel="icon" href="/fire.png" />
