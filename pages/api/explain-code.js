@@ -17,6 +17,7 @@ export default async function (req, res) {
     }
 
     const code = req.body.code || '';
+    console.log(req.body)
 
     if (code.trim().length === 0) {
         res.status(400).json({

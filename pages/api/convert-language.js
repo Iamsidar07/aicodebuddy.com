@@ -16,7 +16,7 @@ export default async function (req, res) {
         return;
     }
 
-    const {code,language} = req.body|| '';
+    const { code, convertToLanguage } = req.body|| '';
     
     if (code.trim().length === 0) {
         res.status(400).json({
@@ -29,7 +29,7 @@ export default async function (req, res) {
 
     try {
         const completion = await openai.createCompletion({
-            prompt: generatePrompt(code,language),
+            prompt: generatePrompt(code, convertToLanguage),
             model: "text-davinci-003",
             temperature: 0.9,
             max_tokens: 2000,
@@ -51,8 +51,8 @@ export default async function (req, res) {
     }
 }
 
-function generatePrompt(code,language) {
+function generatePrompt(code, convertToLanguage) {
 
-    return `Hey ChatGPT,You are a MIT Graduates in Computer scrience and you teaches coding to kids,Convert this code into ${language} programming language :
+    return `Hey ChatGPT,You are a MIT Graduates in Computer scrience and you teaches coding to kids,Convert this code into ${convertToLanguage} programming language :
     ${code}`;
 }
