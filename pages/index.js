@@ -14,7 +14,7 @@ export default function Home() {
             <h1 className="text-6xl  mt-4  font-bold text-white capitalize text-center">
               Revamp Your <span className='text-gradient'>{`{coding}`}</span> Skill.
             </h1>
-            <p className="mt-5 text-2xl text-[#D0DFFF] max-w-4xl text-center capitalize font-semibold">
+            <p className="mt-5 text-lg text-[#D0DFFF] max-w-4xl text-center capitalize font-semibold">
               Upgrade your coding skills with our aicodebuddy.com. Our platform enables you<span className='orangegradient'> To comment on code, fix bugs, convert to multiple languages, and refactor existing code</span>.
             </p>
             <Link href={"/explore"}>
