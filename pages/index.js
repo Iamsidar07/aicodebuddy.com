@@ -11,7 +11,7 @@ export default function Home() {
       <main className="h-full py-4 flex flex-1 flex-col justify-center items-center max-w-7xl mx-auto">
         <Fade bottom>
           <div className='max-w-6xl mx-auto flex flex-col items-center justify-center'>
-            <h1 className="text-6xl  mt-4  font-bold text-white capitalize">
+            <h1 className="text-6xl  mt-4  font-bold text-white capitalize text-center">
               Revamp Your <span className='text-gradient'>{`{coding}`}</span> Skill.
             </h1>
             <p className="mt-5 text-2xl text-[#D0DFFF] max-w-4xl text-center capitalize font-semibold">

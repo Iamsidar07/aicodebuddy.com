@@ -13,7 +13,7 @@ const Select = ({ language, setLanguage }) => {
                 }
             </select> */}
             <div className='relative bg-[#161b23] z-10'>
-                <div className='flex items-center space-x-2 px-4 py-6 ' onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+                <div className='flex items-center justify-between space-x-2 px-4 py-6 ' onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                     <p>{language.convertToLanguage || "Python"}</p>
                     <AiOutlineDown size={18} color="gray" />
                 </div>
