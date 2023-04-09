@@ -7,7 +7,7 @@ import Features from '../components/Features';
 export default function Home() {
 
   return (
-    <div className="p-3 md:px-8">
+    <div className="p-4 md:px-8">
       <main className="h-full py-4 flex flex-1 flex-col justify-center items-center max-w-7xl mx-auto">
         <Fade bottom>
           <div className='max-w-6xl mx-auto flex flex-col items-center justify-center'>
