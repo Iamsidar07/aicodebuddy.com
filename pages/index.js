@@ -15,7 +15,7 @@ export default function Home() {
               Revamp Your <span className='text-gradient'>{`{coding}`}</span> Skill.
             </h1>
             <p className="mt-5 text-lg text-[#D0DFFF] max-w-4xl text-center capitalize font-semibold">
-              Upgrade your coding skills with our aicodebuddy.com. Our platform enables you<span className='orangegradient'> To comment on code, fix bugs, convert to multiple languages, and refactor existing code</span>.
+              Upgrade your coding skills with our aicodebuddy.com. Our platform enables you<span className='orangegradient'> To add comments on code, fix bugs, convert to multiple languages, and refactor existing code</span>.
             </p>
             <Link href={"/explore"}>
               <p className=' text-white btn border-none rounded-full text-center cursor-pointer px-8 py-4 max-w-[400px] my-8 font-semibold hover:bg-blue-600 transition-colors duration-200 ease-in'>Start Exploring Now </p>
