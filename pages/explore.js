@@ -58,7 +58,7 @@ const Explore = () => {
     }
 
     return (
-        <div className="p-2 md:px-8">
+        <div className="p-4 md:px-8">
             <main className="h-full py-4 flex flex-1 flex-col justify-center items-center max-w-5xl mx-auto">
                 <h1 className="text-gradient  text-3xl md:text-6xl text-center  mt-4  mb-4 font-bold">
                     The ⚡ Flash of coders
