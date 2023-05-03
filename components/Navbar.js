@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className={` bg-[#0d1117b9] backdrop-blur sticky top-0 right-0 left-0 transition-all duration-250 ease-in z-[20] bg-opacity-95 border-b-[1px] border-b-[#181b21]`}>
-      <div className="max-w-5xl mx-auto p-2">
+    <nav className={` bg-transparent backdrop-blur  transition-all duration-250 ease-in z-[20] bg-opacity-95 `}>
+      <div className="max-w-5xl mx-auto p-6">
         <div className="flex  items-center justify-between ">
 
           <div className="z-[50] py-1.5 px-1 ">
@@ -25,10 +25,10 @@ const Navbar = () => {
 
           </div>
           <div className="flex gap-1">
-            <Link href="https://instagram.com/iamsidar07" target={"_blank"}>
-              <div className="gradient rounded-lg p-0.5">
+            <Link href="https://github.com/iamsidar07" target={"_blank"}>
+              <div className="btn rounded-full p-0.5">
                 <Image
-                  src={"/Instagram-1.png"}
+                  src={"/github.png"}
                   width={35}
                   height={35}
                   alt="logo"
@@ -37,18 +37,7 @@ const Navbar = () => {
 
               </div>
             </Link>
-            <Link href="https://twitter.com/iamsidar07" target={"_blank"}>
-              <div className="gradient rounded-lg p-0.5">
-                <Image
-                  src={"/Twitter-1.png"}
-                  width={35}
-                  height={35}
-                  alt="logo"
-                  className="object-contain w-full h-auto"
-                />
-
-              </div>
-            </Link>
+            
 
           </div>
         </div>

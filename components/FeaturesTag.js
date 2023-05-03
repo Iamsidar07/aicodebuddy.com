@@ -19,9 +19,9 @@ const FeaturesTag = ({queryInfo,setQueryInfo}) => {
                     <li
                         key={link.id}
                         onClick={() => setQueryInfo({...queryInfo,endpoint:link.link,tagline:link.tagline})}
-                        className={` group whitespace-nowrap  text-left py-2.5 px-4 rounded-full transition-all ease-in duration-100 cursor-pointer text-xs sm:text-sm my-1 mr-1 font-semibold  ${queryInfo.endpoint === link.link ? "featureTagBg" : "bg-[#171e25]"}`}
+                        className={` group whitespace-nowrap  text-left py-3.5 px-5 rounded-xl transition-all ease-in duration-100 cursor-pointer  my-1 mr-1  ${queryInfo.endpoint === link.link ? "featureTagBg" : "bg-[#3e394b]"}`}
                     >
-                        #{link.name.toLowerCase()}
+                        {link.name.toLowerCase()}
                     </li>
                 ))}
             </ul>

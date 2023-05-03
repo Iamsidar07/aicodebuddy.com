@@ -7,7 +7,7 @@ const Result = ({result}) => {
   
   return (
     <Fade bottom>
-      <div className='min-h-96 z-[-1]'>
+      <div className='min-h-96 z-[-1] result'>
         <div className="absolute top-0 left-0 flex items-center gap-1">
           <div className=" w-3 h-3 rounded-full bg-[#FF6059]" />
           <div className=" w-3 h-3 rounded-full bg-[#FABF2F]" />

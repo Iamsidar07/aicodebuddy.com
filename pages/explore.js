@@ -5,8 +5,8 @@ import Form from '../components/Form';
 import Result from '../components/Result';
 import { playSound } from "../lib"
 import FeaturesTag from '../components/FeaturesTag';
-import Image from 'next/image';
-const ExplainCode = () => {
+
+const Explore = () => {
     const [result, setResult] = useState("");
     const [loading, setLoading] = useState(false);
     const [queryInfo, setQueryInfo] = useState({
@@ -60,29 +60,23 @@ const ExplainCode = () => {
     return (
         <div className="p-2 md:px-8">
             <main className="h-full py-4 flex flex-1 flex-col justify-center items-center max-w-5xl mx-auto">
-                <h1 className="text-gradient capitalize text-3xl md:text-5xl text-center  mt-4 md:mt-10 mb-4 font-bold">
-                    {queryInfo.tagline}
+                <h1 className="text-gradient  text-3xl md:text-6xl text-center  mt-4  mb-4 font-bold">
+                    The ⚡ Flash of coders
                 </h1>
                 <FeaturesTag queryInfo={queryInfo} setQueryInfo={setQueryInfo} />
                 <Form btnText={"Generate"} onSubmit={onSubmit} value={queryInfo} btnTextIfLoading={"Genrating..."} setValueHook={setQueryInfo} loading={loading} setLanguage={setQueryInfo} isSelectInput={queryInfo.endpoint === "/convert-language"} language={queryInfo} />
 
-                <div className={"w-full  p-3 md:p-6 gradient my-6 relative rounded-lg min-h-[20rem] z-[-1]"}>
+                
+                <div className={"w-full result p-3 md:p-6  my-6 relative rounded-lg min-h-[20rem] z-[-1]"}>
                     {
                         result && <Result result={result} />
                     }
                 </div>
 
-                <Image
-                    src={"/texture_bg.png"}
-                    width={1920}
-                    height={720}
-                    alt="texture_bg"
-                    quality={100}
-                    className='bg-cover absolute top-0 w-full z-[-1] '
-                />
+                
             </main>
         </div>
     )
 }
 
-export default ExplainCode
+export default Explore
